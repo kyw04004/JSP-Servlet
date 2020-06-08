@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 201620273 김영웅 -->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+	<servlet>
+		<servlet-name>book-list-servlet</servlet-name>
+		<servlet-class>web.BookListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>book-list-servlet</servlet-name>
+		<url-pattern>/book-list</url-pattern>
+	</servlet-mapping>
+</web-app>
