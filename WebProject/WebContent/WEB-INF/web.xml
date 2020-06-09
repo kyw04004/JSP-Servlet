@@ -8,4 +8,12 @@
 		<servlet-name>book-list-servlet</servlet-name>
 		<url-pattern>/book-list</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>check-sort-servlet</servlet-name>
+		<servlet-class>web.CheckSortServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>check-sort-servlet</servlet-name>
+		<url-pattern>/check-sort</url-pattern>
+	</servlet-mapping>
 </web-app>
