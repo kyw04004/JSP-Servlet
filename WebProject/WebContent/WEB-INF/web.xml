@@ -16,4 +16,12 @@
 		<servlet-name>check-sort-servlet</servlet-name>
 		<url-pattern>/check-sort</url-pattern>
 	</servlet-mapping>
+		<servlet>
+		<servlet-name>check-book-servlet</servlet-name>
+		<servlet-class>web.CheckBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>check-book-servlet</servlet-name>
+		<url-pattern>/check-book</url-pattern>
+	</servlet-mapping>
 </web-app>
