@@ -16,12 +16,20 @@
 		<servlet-name>check-sort-servlet</servlet-name>
 		<url-pattern>/check-sort</url-pattern>
 	</servlet-mapping>
-		<servlet>
+	<servlet>
 		<servlet-name>check-book-servlet</servlet-name>
 		<servlet-class>web.CheckBookServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>check-book-servlet</servlet-name>
 		<url-pattern>/check-book</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>can-borrow-book-servlet</servlet-name>
+		<servlet-class>web.CanBorrowBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>can-borrow-book-servlet</servlet-name>
+		<url-pattern>/can-borrow-book</url-pattern>
 	</servlet-mapping>
 </web-app>
