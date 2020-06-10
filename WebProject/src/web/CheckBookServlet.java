@@ -40,8 +40,6 @@ public class CheckBookServlet extends HttpServlet {
 			list.setCount(cnt, rs.getInt("count"));
 			cnt++;
 		}
-		if(upperSeqNo>0) list.setFirstPage(false);
-		else list.setFirstPage(true);
 		if(!rs.next())
 			list.setLastPage(true);
 		}
