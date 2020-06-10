@@ -5,7 +5,6 @@
 	<body>
 		<h1 style="text-align:center"><a href='Home.jsp'>JSP 도서관</a></h1>
 		<h3 style="text-align:center">홈페이지</h3>
-		<h4 style="text-align:center">왼쪽의 메뉴를 이용해주세요!</h4>
         	<ul>
             	<li><a href='book-list'>목록</a></li>
                 <li><a href="check-sort">대여량 기준 정렬</a></li>
