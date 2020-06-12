@@ -32,4 +32,12 @@
 		<servlet-name>can-borrow-book-servlet</servlet-name>
 		<url-pattern>/can-borrow-book</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>borrow-book-servlet</servlet-name>
+		<servlet-class>web.BorrowBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>borrow-book-servlet</servlet-name>
+		<url-pattern>/borrow-book</url-pattern>
+	</servlet-mapping>
 </web-app>
