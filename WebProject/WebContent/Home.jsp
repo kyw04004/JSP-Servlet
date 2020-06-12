@@ -10,7 +10,7 @@
                 <li><a href="check-sort">대여량 기준 정렬</a></li>
                 <li><a href="check-book">대여된 책</a></li>
                 <li><a href="can-borrow-book">대여 가능한 책</a></li>
-                <li><a href="borrow-book">대여</a></li>
+                <li><a href="BorrowForm.jsp">대여</a></li>
                 <li><a href="return-book">반납</a></li>
                 <li><a href="add-book">추가</a></li>
         	</ul>
