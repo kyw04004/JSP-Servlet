@@ -40,4 +40,20 @@
 		<servlet-name>borrow-book-servlet</servlet-name>
 		<url-pattern>/borrow-book</url-pattern>
 	</servlet-mapping>
+		<servlet>
+		<servlet-name>return-book-servlet</servlet-name>
+		<servlet-class>web.ReturnBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>return-book-servlet</servlet-name>
+		<url-pattern>/return-book</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>return-servlet</servlet-name>
+		<servlet-class>web.ReturnServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>return-servlet</servlet-name>
+		<url-pattern>/return</url-pattern>
+	</servlet-mapping>
 </web-app>
