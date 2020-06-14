@@ -12,7 +12,7 @@
                 <li><a href="can-borrow-book">대여 가능한 책</a></li>
                 <li><a href="BorrowForm.jsp">대여</a></li>
                 <li><a href="return-book">반납</a></li>
-                <li><a href="add-book">추가</a></li>
+                <li><a href="AddForm.jsp">추가</a></li>
         	</ul>
 		<form action=/WebProject/borrow-book method=POST>
 			대여할 아이디를 입력하세요: <input type=text name=ID size=10>

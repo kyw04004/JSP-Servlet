@@ -12,7 +12,7 @@
                 <li><a href="can-borrow-book">대여 가능한 책</a></li>
                 <li><a href="BorrowForm.jsp">대여</a></li>
                 <li><a href="return-book">반납</a></li>
-                <li><a href="add-book">추가</a></li>
+                <li><a href="AddForm.jsp">추가</a></li>
         	</ul>
 			<h3>대여할 수 없습니다.</h3>
 	</body>
