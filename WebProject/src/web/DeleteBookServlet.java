@@ -6,13 +6,13 @@ import javax.servlet.http.*;
 public class DeleteBookServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		BookList list=readDB(0);
+		BookList list=readDB();
 		request.setAttribute("Book_LIST", list);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("DeleteBookView.jsp");
 		dispatcher.forward(request, response);
 	}
-	private BookList readDB(int upperSeqNo)
-									throws ServletException{
+	private BookList readDB()
+					throws ServletException{
 		BookList list = new BookList();
 		Connection conn = null;
 		Statement stmt = null;
@@ -36,8 +36,6 @@ public class DeleteBookServlet extends HttpServlet {
 			list.setCount(cnt, rs.getInt("count"));
 			cnt++;
 		}
-		if(!rs.next())
-			list.setLastPage(true);
 		}
 		catch (Exception e) {
 			throw new ServletException(e);

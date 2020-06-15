@@ -6,16 +6,12 @@ import javax.servlet.http.*;
 public class CanBorrowBookServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String strUpperSeqNo=request.getParameter("LAST_SEQ_NO");
-		int upperSeqNo;
-		if(strUpperSeqNo==null) upperSeqNo=0;
-		else upperSeqNo=Integer.parseInt(strUpperSeqNo);
-		BookList list=readDB(upperSeqNo);
+		BookList list=readDB();
 		request.setAttribute("Book_LIST", list);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("CanBorrowBookView.jsp");
 		dispatcher.forward(request, response);
 	}
-	private BookList readDB(int upperSeqNo)
+	private BookList readDB()
 									throws ServletException{
 		BookList list = new BookList();
 		Connection conn = null;
@@ -40,8 +36,6 @@ public class CanBorrowBookServlet extends HttpServlet {
 			list.setCount(cnt, rs.getInt("count"));
 			cnt++;
 		}
-		if(!rs.next())
-			list.setLastPage(true);
 		}
 		catch (Exception e) {
 			throw new ServletException(e);

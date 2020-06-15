@@ -6,17 +6,13 @@ import javax.servlet.http.*;
 public class BookListServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String strUpperSeqNo=request.getParameter("LAST_SEQ_NO");
-		int upperSeqNo;
-		if(strUpperSeqNo==null) upperSeqNo=0;
-		else upperSeqNo=Integer.parseInt(strUpperSeqNo);
-		BookList list=readDB(upperSeqNo);
+		BookList list=readDB();
 		request.setAttribute("Book_LIST", list);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("BookListView.jsp");
 		dispatcher.forward(request, response);
 	}
-	private BookList readDB(int upperSeqNo)
-									throws ServletException{
+	private BookList readDB()
+						throws ServletException{
 		BookList list = new BookList();
 		Connection conn = null;
 		Statement stmt = null;
@@ -27,8 +23,7 @@ public class BookListServlet extends HttpServlet {
 		if(conn==null)
 			throw new Exception("데이터베이스에 입력할 수 없습니다.");
 		stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery("select * from jsplibrary where id > " + 
-										upperSeqNo + " order by id asc;");
+		ResultSet rs = stmt.executeQuery("select * from jsplibrary order by id asc;");
 		int cnt=0;
 		while(true) {
 			if(!rs.next())

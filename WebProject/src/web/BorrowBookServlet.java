@@ -22,7 +22,6 @@ public class BorrowBookServlet extends HttpServlet {
 		if(rs.next()) {
 			String BORROW = rs.getString("borrow");
 			int COUNT = rs.getInt("count");
-			System.out.printf("%s\n",BORROW);
 			if(BORROW.equals("Y"))
 			{
 				chk=1;
@@ -49,7 +48,6 @@ public class BorrowBookServlet extends HttpServlet {
 		catch(Exception ignored){
 		}
 	}
-		System.out.printf("%d\n",chk);
 		if(chk==1)
 		{
 			RequestDispatcher dispatcher = request.getRequestDispatcher("BorrowBookView.jsp");

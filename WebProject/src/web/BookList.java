@@ -9,8 +9,6 @@ public class BookList {
 	private ArrayList<Integer> priceList = new ArrayList<Integer>();
 	private ArrayList<String> borrowList = new ArrayList<String>();
 	private ArrayList<Integer> countList = new ArrayList<Integer>();
-	private boolean firstPage = true;
-	private boolean lastPage = false;
 	public BookList() {
 	}
 	public void setId(int index, String id) {
@@ -31,12 +29,6 @@ public class BookList {
 	public void setCount(int index, Integer count) {
 		this.countList.add(index, count);
 	}
-	public void setFirstPage(boolean firstPage) {
-		this.firstPage=firstPage;
-	}
-	public void setLastPage(boolean lastPage) {
-		this.lastPage=lastPage;
-	}
 	public String[] getId() {
 		return idList.toArray(new String[idList.size()]);
 	}
@@ -54,12 +46,6 @@ public class BookList {
 	}
 	public Integer[] getCount() {
 		return countList.toArray(new Integer[countList.size()]);
-	}
-	public boolean isFirstPage() {
-		return firstPage;
-	}
-	public boolean isLastPage() {
-		return lastPage;
 	}
 	public int getListSize() {
 		return idList.size();

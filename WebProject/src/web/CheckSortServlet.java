@@ -6,16 +6,12 @@ import javax.servlet.http.*;
 public class CheckSortServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String strUpperSeqNo=request.getParameter("LAST_SEQ_NO");
-		int upperSeqNo;
-		if(strUpperSeqNo==null) upperSeqNo= Integer.MAX_VALUE;
-		else upperSeqNo=Integer.parseInt(strUpperSeqNo);
-		BookList list=readDB(upperSeqNo);
+		BookList list=readDB();
 		request.setAttribute("Book_LIST", list);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("CheckSortView.jsp");
 		dispatcher.forward(request, response);
 	}
-	private BookList readDB(int upperSeqNo)
+	private BookList readDB()
 									throws ServletException{
 		BookList list = new BookList();
 		Connection conn = null;
@@ -27,8 +23,7 @@ public class CheckSortServlet extends HttpServlet {
 		if(conn==null)
 			throw new Exception("데이터베이스에 입력할 수 없습니다.");
 		stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery("select * from jsplibrary where count < " + 
-										upperSeqNo + " order by count desc;"); 
+		ResultSet rs = stmt.executeQuery("select * from jsplibrary order by count desc;"); 
 		int cnt=0;
 		while(true) {
 			if(!rs.next())
@@ -41,8 +36,6 @@ public class CheckSortServlet extends HttpServlet {
 			list.setCount(cnt, rs.getInt("count"));
 			cnt++;
 		}
-		if(!rs.next())
-			list.setLastPage(true);
 		}
 		catch (Exception e) {
 			throw new ServletException(e);

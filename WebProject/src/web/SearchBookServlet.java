@@ -38,8 +38,6 @@ public class SearchBookServlet extends HttpServlet {
 			list.setCount(cnt, rs.getInt("count"));
 			cnt++;
 		}
-		if(!rs.next())
-			list.setLastPage(true);
 		}
 		catch (Exception e) {
 			throw new ServletException(e);
