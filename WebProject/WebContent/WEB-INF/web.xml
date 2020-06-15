@@ -64,6 +64,22 @@
 		<servlet-name>add-book-servlet</servlet-name>
 		<url-pattern>/add-book</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>delete-book-servlet</servlet-name>
+		<servlet-class>web.DeleteBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>delete-book-servlet</servlet-name>
+		<url-pattern>/delete-book</url-pattern>
+	</servlet-mapping>
+		<servlet>
+		<servlet-name>delete-servlet</servlet-name>
+		<servlet-class>web.DeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>delete-servlet</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
 	<error-page>
 		<error-code>500</error-code>
 		<location>/DBError.jsp</location>

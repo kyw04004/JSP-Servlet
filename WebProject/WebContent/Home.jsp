@@ -13,6 +13,7 @@
                 <li><a href="BorrowForm.jsp">대여</a></li>
                 <li><a href="return-book">반납</a></li>
                 <li><a href="AddForm.jsp">추가</a></li>
+                <li><a href="delete-book">삭제</a></li>
         	</ul>
 	</body>
 </html>
