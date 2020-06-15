@@ -88,8 +88,4 @@
 		<servlet-name>search-servlet</servlet-name>
 		<url-pattern>/search-book</url-pattern>
 	</servlet-mapping>
-	<error-page>
-		<error-code>500</error-code>
-		<location>/DBError.jsp</location>
-	</error-page>
 </web-app>

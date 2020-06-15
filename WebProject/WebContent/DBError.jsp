@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" isErrorPage="true"%>
-<%response.setStatus(200); %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
 	<head><title>JSP 도서관 - 에러페이지</title></head>

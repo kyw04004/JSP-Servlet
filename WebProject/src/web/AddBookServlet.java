@@ -11,11 +11,13 @@ public class AddBookServlet extends HttpServlet {
 		String TITLE=request.getParameter("TITLEE");
 		String WRITER=request.getParameter("WRITERR");
 		String PRICE=request.getParameter("PRICEE");
+		int chk=0;
+		if(ID==""||TITLE==""||WRITER==""||PRICE=="") chk=3;
+		else {
 		int id =Integer.parseInt(ID);
 		int price =Integer.parseInt(PRICE);
 		Connection conn = null;
 		Statement stmt = null;
-		int chk=0;
 		try {
 		Class.forName("com.mysql.jdbc.Driver");
 		conn=DriverManager.getConnection(
@@ -49,7 +51,9 @@ public class AddBookServlet extends HttpServlet {
 		catch(Exception ignored){
 		}
 	}
+	}
 		if(chk==1)response.sendRedirect("http://localhost:8080/WebProject/ExistedID.jsp");
 		if(chk==2)response.sendRedirect("http://localhost:8080/WebProject/book-list");
+		if(chk==3)response.sendRedirect("http://localhost:8080/WebProject/DBError.jsp");
 	}
 }
