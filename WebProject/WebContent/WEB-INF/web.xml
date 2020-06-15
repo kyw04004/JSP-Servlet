@@ -56,4 +56,16 @@
 		<servlet-name>return-servlet</servlet-name>
 		<url-pattern>/return</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>add-book-servlet</servlet-name>
+		<servlet-class>web.AddBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>add-book-servlet</servlet-name>
+		<url-pattern>/add-book</url-pattern>
+	</servlet-mapping>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/DBError.jsp</location>
+	</error-page>
 </web-app>
