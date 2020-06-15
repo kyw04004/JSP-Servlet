@@ -2,10 +2,10 @@
 <% request.setCharacterEncoding("utf-8"); %>
 <!DOCTYPE html>
 <html>
-	<head><title>JSP 도서관 - 추가페이지</title></head>
+	<head><title>JSP 도서관 - 검색페이지</title></head>
 	<body>
 		<h1 style="text-align:center"><a href='Home.jsp'>JSP 도서관</a></h1>
-		<h3 style="text-align:center">추가페이지</h3>
+		<h3 style="text-align:center">검색페이지</h3>
         	<ul>
         		<li><a href="SearchForm.jsp">검색</a></li>
             	<li><a href='book-list'>목록</a></li>
@@ -17,26 +17,9 @@
                 <li><a href="AddForm.jsp">추가</a></li>
                 <li><a href="delete-book">삭제</a></li>
         	</ul>
-	<form action="add-book" method="post">
-			<table style= "margin:0 auto; text-align:center" border=1>
-			<tr>
-				<td>ID</td>
-				<td><input type=text name=IDD size=60/></td>
-			</tr>
-			<tr>
-				<td>이름</td>
-				<td><input type=text name=TITLEE size=60/></td>
-			</tr>
-			<tr>
-				<td>저자</td>
-				<td><input type=text name=WRITERR size=60/></td>
-			</tr>
-			<tr>
-				<td>가격</td>
-				<td><input type=text name=PRICEE size=60/></td>
-			</tr>
-			</table>
-			<input style="text-align:center" type=submit value='확인'/>
+	<form action="search-book" method="post">
+			책 이름 : <input type=text name=NAME size=50>
+			<input type=submit value='확인'/>
 		</form>
 	</body>
 </html>

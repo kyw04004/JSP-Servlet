@@ -72,13 +72,21 @@
 		<servlet-name>delete-book-servlet</servlet-name>
 		<url-pattern>/delete-book</url-pattern>
 	</servlet-mapping>
-		<servlet>
+	<servlet>
 		<servlet-name>delete-servlet</servlet-name>
 		<servlet-class>web.DeleteServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>delete-servlet</servlet-name>
 		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>search-servlet</servlet-name>
+		<servlet-class>web.SearchBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>search-servlet</servlet-name>
+		<url-pattern>/search-book</url-pattern>
 	</servlet-mapping>
 	<error-page>
 		<error-code>500</error-code>
