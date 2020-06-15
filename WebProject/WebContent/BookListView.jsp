@@ -36,15 +36,5 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<c:if test="${!Book_LIST.firstPage}">
-			<a href='book-list?LAST_SEQ_NO=${Book_LIST.id[0] -6 }'>
-				<h5 style="text-align:left">이전페이지</h5>
-			</a>
-		</c:if>
-		<c:if test="${!Book_LIST.lastPage}">
-			<a href='book-list?LAST_SEQ_NO=${Book_LIST.id[Book_LIST.listSize-1]}'>
-				<h5 style="text-align:right">다음페이지</h5>
-			</a>
-		</c:if>
 	</body>
 </html>

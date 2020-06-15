@@ -28,8 +28,9 @@ public class BookListServlet extends HttpServlet {
 			throw new Exception("데이터베이스에 입력할 수 없습니다.");
 		stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery("select * from jsplibrary where id > " + 
-										upperSeqNo + " order by id asc;"); 
-		for (int cnt = 0; cnt < 5; cnt++) {
+										upperSeqNo + " order by id asc;");
+		int cnt=0;
+		while(true) {
 			if(!rs.next())
 				break;
 			list.setId(cnt, rs.getString("id"));
@@ -38,11 +39,8 @@ public class BookListServlet extends HttpServlet {
 			list.setPrice(cnt, rs.getInt("price"));
 			list.setBorrow(cnt, rs.getString("borrow"));
 			list.setCount(cnt, rs.getInt("count"));
+			cnt++;
 		}
-		if(upperSeqNo>0) list.setFirstPage(false);
-		else list.setFirstPage(true);
-		if(!rs.next())
-			list.setLastPage(true);
 		}
 		catch (Exception e) {
 			throw new ServletException(e);
