@@ -1,7 +1,15 @@
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
-	<head><title>JSP 도서관 - 홈페이지</title></head>
+	<head>
+		<style>
+			p
+			{
+				text-align : center;
+			}
+		</style>
+		<title>JSP 도서관 - 홈페이지</title>
+	</head>
 	<body>
 		<h1 style="text-align:center"><a href='Home.jsp'>JSP 도서관</a></h1>
 		<h3 style="text-align:center">홈페이지</h3>
@@ -15,5 +23,7 @@
                 <li><a href="AddForm.jsp">추가</a></li>
                 <li><a href="delete-book">삭제</a></li>
         	</ul>
+        	<p><img src="https://cdn.pixabay.com/photo/2017/08/06/22/01/books-2596809_1280.jpg"
+        	width="800" height="500"></p>
 	</body>
 </html>
