@@ -81,12 +81,20 @@
 		<url-pattern>/delete</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>search-servlet</servlet-name>
-		<servlet-class>web.SearchBookServlet</servlet-class>
+		<servlet-name>search-title-servlet</servlet-name>
+		<servlet-class>web.SearchTitleBookServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>search-servlet</servlet-name>
-		<url-pattern>/search-book</url-pattern>
+		<servlet-name>search-title-servlet</servlet-name>
+		<url-pattern>/search-title-book</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>search-writer-servlet</servlet-name>
+		<servlet-class>web.SearchWriterBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>search-writer-servlet</servlet-name>
+		<url-pattern>/search-writer-book</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>recommand-servlet</servlet-name>
