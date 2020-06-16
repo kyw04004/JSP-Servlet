@@ -104,4 +104,16 @@
 		<servlet-name>recommand-servlet</servlet-name>
 		<url-pattern>/recommand-book</url-pattern>
 	</servlet-mapping>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/ErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+		<location>/ErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/ErrorPage.jsp</location>
+	</error-page>
 </web-app>

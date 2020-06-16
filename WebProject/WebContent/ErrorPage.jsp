@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" isErrorPage="true"%>
+<%response.setStatus(200); %>
 <!DOCTYPE html>
 <html>
-	<head><title>JSP 도서관 - 추가페이지</title></head>
+	<head><title>JSP 도서관 - 에러페이지</title></head>
 	<body>
 		<h1 style="text-align:center"><a href='Home.jsp'>JSP 도서관</a></h1>
-		<h3 style="text-align:center">추가페이지</h3>
+		<h3 style="text-align:center">에러페이지</h3>
         	<ul>
         		<li><a href="SearchForm.jsp">검색</a></li>
         		<li><a href="recommand-book">추천순위</a></li>
@@ -17,6 +18,6 @@
                 <li><a href="AddForm.jsp">추가</a></li>
                 <li><a href="delete-book">삭제</a></li>
         	</ul>
-			<h3>모든 데이터를 입력하세요.</h3>
+			<h3>에러가 발생하였습니다.</h3>
 	</body>
 </html>
