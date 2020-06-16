@@ -7,6 +7,7 @@
 		<h3 style="text-align:center">에러페이지</h3>
         	<ul>
         		<li><a href="SearchForm.jsp">검색</a></li>
+        		<li><a href="recommand-book">추천순위</a></li>
             	<li><a href='book-list'>목록</a></li>
                 <li><a href="check-sort">대여량 기준 정렬</a></li>
                 <li><a href="check-book">대여된 책</a></li>

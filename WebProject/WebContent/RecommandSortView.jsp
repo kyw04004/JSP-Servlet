@@ -2,10 +2,10 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-	<head><title>JSP 도서관 - 대여된 책페이지</title></head>
+	<head><title>JSP 도서관 - 추천 순위페이지</title></head>
 	<body>
 		<h1 style="text-align:center"><a href='Home.jsp'>JSP 도서관</a></h1>
-		<h3 style="text-align:center">대여된 책페이지</h3>
+		<h3 style="text-align:center">추천순위페이지</h3>
         	<ul>
         		<li><a href="SearchForm.jsp">검색</a></li>
         		<li><a href="recommand-book">추천순위</a></li>

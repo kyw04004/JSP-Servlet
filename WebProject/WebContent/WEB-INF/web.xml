@@ -88,4 +88,12 @@
 		<servlet-name>search-servlet</servlet-name>
 		<url-pattern>/search-book</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>recommand-servlet</servlet-name>
+		<servlet-class>web.RecommandSortServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>recommand-servlet</servlet-name>
+		<url-pattern>/recommand-book</url-pattern>
+	</servlet-mapping>
 </web-app>

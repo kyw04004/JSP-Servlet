@@ -9,6 +9,7 @@ public class BookList {
 	private ArrayList<Integer> priceList = new ArrayList<Integer>();
 	private ArrayList<String> borrowList = new ArrayList<String>();
 	private ArrayList<Integer> countList = new ArrayList<Integer>();
+	private ArrayList<Integer> recommandList = new ArrayList<Integer>();
 	public BookList() {
 	}
 	public void setId(int index, String id) {
@@ -29,6 +30,9 @@ public class BookList {
 	public void setCount(int index, Integer count) {
 		this.countList.add(index, count);
 	}
+	public void setRecommand(int index, Integer recommand) {
+		this.recommandList.add(index, recommand);
+	}
 	public String[] getId() {
 		return idList.toArray(new String[idList.size()]);
 	}
@@ -46,6 +50,9 @@ public class BookList {
 	}
 	public Integer[] getCount() {
 		return countList.toArray(new Integer[countList.size()]);
+	}
+	public Integer[] getRecommand() {
+		return recommandList.toArray(new Integer[recommandList.size()]);
 	}
 	public int getListSize() {
 		return idList.size();

@@ -30,7 +30,7 @@ public class AddBookServlet extends HttpServlet {
 		else {
 			chk=2;
 			String command = String.format("insert into jsplibrary"+
-					" (id, title, writer,price,borrow,count) values (%d , '%s','%s', %d ,'Y', 0);",
+					" (id, title, writer,price,borrow,count,recommand) values (%d , '%s','%s', %d ,'Y', 0, 0);",
 					id,TITLE,WRITER,price);
 			int rowNUM = stmt.executeUpdate(command);
 			if(rowNUM<1)

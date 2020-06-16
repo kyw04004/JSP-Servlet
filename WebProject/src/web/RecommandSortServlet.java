@@ -3,17 +3,15 @@ import java.io.*;
 import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-public class SearchBookServlet extends HttpServlet {
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
+public class RecommandSortServlet extends HttpServlet {
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		String Name=request.getParameter("NAME");
-		BookList list=readDB(Name);
+		BookList list=readDB();
 		request.setAttribute("Book_LIST", list);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("SearchBookView.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("RecommandSortView.jsp");
 		dispatcher.forward(request, response);
 	}
-	private BookList readDB(String Name)
+	private BookList readDB()
 									throws ServletException{
 		BookList list = new BookList();
 		Connection conn = null;
@@ -25,7 +23,7 @@ public class SearchBookServlet extends HttpServlet {
 		if(conn==null)
 			throw new Exception("데이터베이스에 입력할 수 없습니다.");
 		stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery("select * from jsplibrary where title like '%"+Name+"%';"); 
+		ResultSet rs = stmt.executeQuery("select * from jsplibrary order by recommand desc;"); 
 		int cnt=0;
 		while(true) {
 			if(!rs.next())

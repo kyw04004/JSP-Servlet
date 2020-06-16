@@ -34,6 +34,7 @@ public class BookListServlet extends HttpServlet {
 			list.setPrice(cnt, rs.getInt("price"));
 			list.setBorrow(cnt, rs.getString("borrow"));
 			list.setCount(cnt, rs.getInt("count"));
+			list.setRecommand(cnt,rs.getInt("recommand"));
 			cnt++;
 		}
 		}

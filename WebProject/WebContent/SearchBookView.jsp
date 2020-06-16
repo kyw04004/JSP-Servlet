@@ -8,6 +8,7 @@
 		<h3 style="text-align:center">검색페이지</h3>
         	<ul>
         		<li><a href="SearchForm.jsp">검색</a></li>
+        		<li><a href="recommand-book">추천순위</a></li>
             	<li><a href='book-list'>목록</a></li>
                 <li><a href="check-sort">대여량 기준 정렬</a></li>
                 <li><a href="check-book">대여된 책</a></li>
@@ -25,6 +26,7 @@
 				<td width=90>가격</td>
 				<td width=80>대여가능</td>
 				<td width=80>대여횟수</td>
+				<td width=80>추천</td>
 			</tr>
 			<c:forEach var="cnt" begin="0" end="${Book_LIST.listSize-1}">
 				<tr>
@@ -34,6 +36,7 @@
 					<td>${Book_LIST.price[cnt]}</td>
 					<td>${Book_LIST.borrow[cnt]}</td>
 					<td>${Book_LIST.count[cnt]}</td>
+					<td>${Book_LIST.recommand[cnt]}</td>
 				</tr>
 			</c:forEach>
 		</table>
