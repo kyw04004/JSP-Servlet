@@ -19,6 +19,7 @@
                <td width=130><a href="delete-book">삭제</a></td>
                </tr>
         	</table>
-			<h3>이미 있는 ID입니다.</h3>
+        	 <br><br><br><br><br>
+			<h3 align="center">이미 있는 ID입니다.</h3>
 	</body>
 </html>

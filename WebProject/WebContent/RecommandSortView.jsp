@@ -20,8 +20,10 @@
                <td width=130><a href="delete-book">삭제</a></td>
                </tr>
         	</table>
+        	 <br><br><br><br><br>
 		<table style= "margin:0 auto; text-align:center" border=1>
 			<tr>
+				<td width=40>순위</td>
 				<td width=40>ID</td>
 				<td width=300>이름 </td>
 				<td width=90>저자 </td>
@@ -32,6 +34,7 @@
 			</tr>
 			<c:forEach var="cnt" begin="0" end="${Book_LIST.listSize-1}">
 				<tr>
+					<td>${cnt+1}</td>
 					<td>${Book_LIST.id[cnt]}</td>
 					<td>${Book_LIST.title[cnt]}</td>
 					<td>${Book_LIST.writer[cnt]}</td>

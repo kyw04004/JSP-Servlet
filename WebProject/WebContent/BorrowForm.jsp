@@ -19,7 +19,8 @@
                <td width=130><a href="delete-book">삭제</a></td>
                </tr>
         	</table>
-		<form action=/WebProject/borrow-book method=POST>
+        	 <br><br><br><br><br>
+		<form align="center" action=/WebProject/borrow-book method=POST>
 			대여할 아이디를 입력하세요: <input type=text name=ID size=10>
 			<input type=submit value='확인'>
 		</form>

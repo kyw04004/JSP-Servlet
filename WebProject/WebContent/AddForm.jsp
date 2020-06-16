@@ -20,6 +20,7 @@
                <td width=130><a href="delete-book">삭제</a></td>
                </tr>
         	</table>
+        	 <br><br><br><br><br>
 	<form action="add-book" method="post">
 			<table style= "margin:0 auto; text-align:center" border=1>
 			<tr>
@@ -39,7 +40,7 @@
 				<td><input type=text name=PRICEE size=60/></td>
 			</tr>
 			</table>
-			<input style="text-align:center" type=submit value='확인'/>
+			<div align="center"><input style="text-align:center" type=submit value='확인'/></div>
 		</form>
 	</body>
 </html>

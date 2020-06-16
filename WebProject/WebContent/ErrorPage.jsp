@@ -20,6 +20,7 @@
                <td width=130><a href="delete-book">삭제</a></td>
                </tr>
         	</table>
-			<h3>에러가 발생하였습니다.</h3>
+        	 <br><br><br><br><br>
+			<h3 align="center">에러가 발생하였습니다.</h3>
 	</body>
 </html>

@@ -27,6 +27,7 @@
                <td width=130><a href="delete-book">삭제</a></td>
                </tr>
         	</table>
+        	 <br><br><br><br><br>
         	<p><img src="https://cdn.pixabay.com/photo/2017/08/06/22/01/books-2596809_1280.jpg"
         	width="800" height="500"></p>
 	</body>

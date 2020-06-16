@@ -20,6 +20,7 @@
                <td width=130><a href="delete-book">삭제</a></td>
                </tr>
         	</table>
+        	 <br><br><br><br><br>
 		<table style= "margin:0 auto; text-align:center" border=1>
 			<tr>
 				<td width=40>ID</td>

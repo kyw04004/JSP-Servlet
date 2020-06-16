@@ -20,11 +20,12 @@
                <td width=130><a href="delete-book">삭제</a></td>
                </tr>
         	</table>
-	<form action="search-title-book" method="post">
+        	<br><br><br><br><br>
+	<form align="center" action="search-title-book" method="post">
 			책 이름 : <input type=text name=NAME size=50>
-			<input type=submit value='확인'/> <br>
+			<input type=submit value='확인'/> <br> <br>
 	</form>
-	<form action="search-writer-book" method="post">
+	<form align="center" action="search-writer-book" method="post">
 		   	    저자 : <input type=text name=WRITER size=50>
 			<input type=submit value='확인'/>
 		</form>

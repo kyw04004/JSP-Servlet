@@ -19,6 +19,7 @@
                <td width=130><a href="delete-book">삭제</a></td>
                </tr>
         	</table>
-			<h3>모든 데이터를 입력하세요.</h3>
+        	 <br><br><br><br><br>
+			<h3 align="center">모든 데이터를 입력하세요.</h3>
 	</body>
 </html>
