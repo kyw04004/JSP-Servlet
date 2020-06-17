@@ -1,10 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<% request.setCharacterEncoding("utf-8"); %>
+<%  // 인증된 세션이 없는경우, 해당페이지를 볼 수 없게 함.
+    if (session.getAttribute("ID") != null) {
+        response.sendRedirect("SuccessLogin.jsp");
+    }
+%>
 <!DOCTYPE html>
 <html>
-	<head><title>JSP 도서관 - 추가페이지</title></head>
+	<head><title>JSP 도서관 - 로그인페이지</title></head>
 	<body>
 		<h1 style="text-align:center"><a href='Home.jsp'>JSP 도서관</a></h1>
-		<h3 style="text-align:center">추가페이지</h3>
+		<h3 style="text-align:center">로그인페이지</h3>
 		<%
 			String ID = (String)session.getAttribute("ID");
 			if(ID==null) out.println("<br><br>");
@@ -31,6 +37,18 @@
                </tr>
         	</table>
         	 <br><br><br><br><br>
-			<h3 align="center">모든 데이터를 입력하세요.</h3>
+	<form action="login" method="post">
+			<table style= "margin:0 auto; text-align:center" border=1>
+			<tr>
+				<td>ID</td>
+				<td><input type=text name=ID size=60/></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type=password name=PASSWORD size=60/></td>
+			</tr>
+			</table>
+			<div align="center"><input style="text-align:center" type=submit value='확인'/></div>
+		</form>
 	</body>
 </html>
