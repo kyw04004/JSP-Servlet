@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
-	<head><title>JSP 도서관 - 추가페이지</title></head>
+	<head><title>JSP 도서관</title></head>
 	<body>
 		<h1 style="text-align:center"><a href='Home.jsp'>JSP 도서관</a></h1>
-		<h3 style="text-align:center">추가페이지</h3>
+		<h3 style="text-align:center">에러페이지</h3>
 		<%
 			String ID = (String)session.getAttribute("ID");
 			if(ID==null) out.println("<br><br>");
@@ -31,6 +31,6 @@
                </tr>
         	</table>
         	 <br><br><br><br><br>
-			<h3 align="center">모든 데이터를 입력하세요.</h3>
+			<h3 align="center">아이디와 패스워드를 확인해주세요.</h3>
 	</body>
 </html>
