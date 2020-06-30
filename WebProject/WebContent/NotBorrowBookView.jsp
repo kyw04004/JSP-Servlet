@@ -5,19 +5,8 @@
 	<body>
 		<h1 style="text-align:center"><a href='Home.jsp'>JSP 도서관</a></h1>
 		<h3 style="text-align:center">대여페이지</h3>
-		<%
-			String ID = (String)session.getAttribute("ID");
-			if(ID==null) out.println("<br><br>");
-			else
-				{
-					out.println("<div align=right>"+ID+"님 </div><br>");
-					out.println("<div align=right><a href=Logout.jsp>로그아웃</a></div>");
-				}
-		%>
        	<table style= "margin:0 auto; text-align:center" border=1 bgcolor='#d6eef8'>
         		<tr>
-        		<td width=130><a href="SignUpForm.jsp">회원가입</a></td>
-        		<td width=130><a href="LoginForm.jsp">로그인</a></td>
         		<td width=130><a href="SearchForm.jsp">검색</a></td>
         		<td width=130><a href="recommand-book">추천순위</a></td>
             	<td width=130><a href='book-list'>목록</a></td>
